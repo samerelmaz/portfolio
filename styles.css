@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Muli', sans-serif;
 }
 *:focus {
     outline: 0;
@@ -54,12 +55,12 @@ body:after{
 }
 .nav-item {
     list-style-type: none;
-    display: inline-block;
     height: 100%;
     display: inline-flex;
     align-items: center;
     color: white;
     padding: 0 15px;
+    font-weight: 700;
 }
 .nav-item:hover {
     background-color: white;
@@ -83,13 +84,11 @@ body:after{
 }
 .welcome-header {
     font-size: 6rem;
+    font-weight: 600;
 }
 .welcome-subheader {
     font-size: 2.7rem;
-}
-.section {
-    margin: 150px auto;
-    position: relative;
+    font-weight: 500;
 }
 .section-overlay {
     background-color: #8000ff;
@@ -97,14 +96,15 @@ body:after{
     position: relative;
 }
 .about-section {
-    margin-top: 0;
+    margin: 0 auto 150px auto;
+    position: relative;
 }
 .about-header {
     padding-top: 30px;
 }
 .section-header {
     text-align: center;
-    font-size: 2.35rem;
+    font-size: 2.4rem;
 }
 .about-description {
     width: 35%;
@@ -162,6 +162,10 @@ body:after{
     left: 50%;
     transform: translateX(-50%) translateY(100%);
 }
+.projects-section {
+    margin: 150px auto;
+    position: relative;
+}
 .projects-header {
     color: white;
     position: absolute;
@@ -171,8 +175,10 @@ body:after{
 }
 .project {
     width: 70%;
+    max-width: 950px;
     display: flex;
     margin: 75px auto 100px auto;
+    border: 1px solid red;
 }
 .project-info {
     width: 45%;
@@ -186,6 +192,7 @@ body:after{
     text-align: justify;
     line-height: 140%;
     margin: 10px 0;
+    font-weight: 500;
 }
 .project-technologies-container {
     display: flex;
@@ -200,12 +207,15 @@ body:after{
     width: 50px;
 }
 .project-footer {
-    width: 300px;
+    width: fit-content;
     margin: 0 auto;
     text-align: center;
 }
-.project-link {
-    margin: 0 20px;
+.project-live {
+    margin-right: 20px;
+}
+.project-source {
+    margin-left: 20px;
 }
 .project-img {
     width: 55%;
@@ -225,6 +235,10 @@ body:after{
     background: #fff;
     height: 20%;
 }
+.contact-section {
+    margin: 0 auto;
+    position: relative;
+}
 .contact-header {
     color: white;
     position: absolute;
@@ -233,16 +247,19 @@ body:after{
     transform: translate(-50%, -50%);
 }
 .contact-description {
-    width: 300px;
+    width: 375px;
     margin: 50px auto 30px auto;
     text-align: center;
     color: #383838;
+    font-weight: 500;
+    font-size: 1.2rem;
 }
 .contact-description a {
     color: #8000ff;
+    font-weight: 500;
 }
 .contact-form {
-    width: 25%;
+    width: 325px;
     margin: 0 auto;
     text-align: center;
     border-radius: 10px;
@@ -251,9 +268,11 @@ body:after{
     padding: 15px;
     background-color: #8000ff;
     color: white;
+    font-weight: 500;
 }
 .form-header {
     margin-bottom: 20px;
+    font-size: 1.4rem;
 }
 .contact-input {
     width: 100%;
@@ -262,43 +281,148 @@ body:after{
     padding: 10px;
     margin-bottom: 10px;
     color: #383838;
+    font-weight: 500;
+    font-size: 1rem;
 }
 .contact-message {
     width: 100%;
     height: 120px;
     border-radius: 5px;
     padding: 10px;
-    font-family: sans-serif;
+    font-family: 'Muli', sans-serif;
     border: 1px solid #8000ff;
     color: #383838;
+    font-weight: 500;
+    font-size: 1rem;
 }
 .contact-button {
     padding: 10px 30px;
     border-radius: 5px;
-    border: 1px solid #8000ff;
     margin-top: 15px;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: white;
+    border: 2px solid white;
+    background-color: #8000ff
 }
 .contact-button:hover {
-    background-color: #8000ff;
-    color: white;
+    background-color: white;
+    color: #383838;
+}
+.contact-success {
+   margin-top: 10px;
+   display: none;
+   font-weight: 700; 
+   font-size: 1.1rem;
+   color: white;
 }
 .contact-icons-container {
     display: flex;
     justify-content: center;
-    width: 500px;
     margin: 30px auto;
 }
 .contact-icon {
     width: 50px;
     margin: 0 20px;
 }
-.contact-section {
-    margin: 0 auto;
-}
-.footer {
+.footer-section {
    margin: 5px auto 0px auto;
    text-align: center;
    padding: 5px 0;
    background-color: #8000ff;
-   color: white;
+   color: white; 
+}
+@media (max-width: 1050px) {
+    .about-description {
+        width: 45%;
+    }
+    .about-technologies-container {
+        width: 75%;
+    }
+    .used-technology {
+        width: 110px;
+        margin: 20px 25px;
+    }
+    .about-section {
+        margin-bottom: 125px;
+    }
+    .about-header {
+        margin: 0 40px;
+    }
+}
+@media (max-width: 800px) {
+    .contact-description {
+        margin: 30px auto;
+    }
+    .projects-section {
+        margin-bottom: 75px;
+    }
+    .project {
+        margin: 60px auto;
+    }
+    .about-description {
+        width: 55%;
+    }
+    .about-technologies-container {
+        width: 80%;
+    }
+    .used-technology {
+        width: 110px;
+    }
+    .about-section {
+        margin-bottom: 90px;
+    }
+}
+@media (max-width: 670px) {
+    .about-description {
+        width: 65%;
+    }
+    .about-technologies-container {
+        width: 87%;
+    }
+    .used-technology {
+        width: 100px;
+        margin: 20px 20px;
+    } 
+    .about-section {
+        margin-bottom: 80px;
+    }
+}
+@media (max-width: 500px) {
+    .contact-description {
+        width: 300px;
+    }
+    .triangle {
+        height: 80px;
+    }
+    .triangle::before {  
+        border-width: 65px 65px 0 65px;
+    }
+    .projects-section {
+        margin-top: 100px; 
+    }
+    .about-description {
+        width: 85%;
+    }
+    .about-section {
+        margin-bottom: 40px;
+    }
+    .about-technologies-container {
+        width: 90%;
+    }
+    .used-technology {
+        width: 85px;
+        margin: 20px 10px;
+    }
+    .nav-item-container {
+        text-align: right;
+    }
+}
+@media (max-width: 350px) {
+    .contact-description {
+        width: 280px;
+    }
+    .contact-form {
+        width: 90%;
+    } 
 }
