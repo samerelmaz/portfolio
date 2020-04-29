@@ -1,4 +1,4 @@
 # portfolio
 My personal portfolio
 
-Click the link to learn more about me, my projects and how to contact me!
+Visit https://samerelmaz.github.io/portfolio/ to learn more about me, my projects and how to contact me!
