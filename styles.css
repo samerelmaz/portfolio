@@ -216,13 +216,43 @@ body:after{
 }
 .project-live {
     margin-right: 20px;
+    font-size: 1.1rem;
 }
 .project-source {
     margin-left: 20px;
+    font-size: 1.1rem;
 }
 .project-img {
     width: 55%;
     min-width: 425px;
+    text-decoration: none;
+}
+.img-container {
+    position: relative;
+}
+.img-container:hover .overlay {
+    opacity: 0.75;
+}
+.img-container p {
+    opacity: 0;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.1rem;
+}
+.img-container:hover p {
+    opacity: 1;
+}
+.overlay {
+    position: absolute;
+    top: 6%;
+    right: 14.5%;
+    bottom: 13.3%;
+    left: 14.5%;
+    opacity: 0;
+    background-color: #383838;
 }
 .curved {
     position: relative;
@@ -390,7 +420,7 @@ body:after{
         display: block;
         color: #383838;
         margin-bottom: 10px;
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
     .projects-section {
         margin: 115px auto 90px auto;
